@@ -1,15 +1,15 @@
+import type { ReactNode } from "react";
+
 interface GoalProps {
   title: string;
-  description: string;
+  children: ReactNode; // ye har wo cheez ho sakti hai jo andar likhi jaaye
 }
 
-export default function Goal({ title, description }: GoalProps) {
+export default function Goal({ title, children }: GoalProps) {
   return (
     <article>
-      <div>
-        <h1>{title}</h1>
-        <h2>{description}</h2>
-      </div>
+      <h1>{title}</h1>
+      <div>{children}</div>
     </article>
   );
 }
